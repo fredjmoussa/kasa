@@ -1,35 +1,30 @@
-/*
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './pages/About';
+import Fiche from './pages/Fiche';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/fiche" element={<Fiche />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
-*/
 
+
+/*
 import React, { Fragment } from "react"
-import "./index.css"
 
-import { BrowserRouter as Router, Route, Link, Switch, Redirect, } from "react-router-dom"
+import { BrowserRouter as Router, Route, Link, Routes, Navigate, } from "react-router-dom"
 
 export default function App() {
 
@@ -50,67 +45,14 @@ export default function App() {
             </li>
           </ul>
         </nav>
-        ;<Switch>
-            <Route path="/" exact component={Home} />          
-            <Route path="/about" component={About} />
-            <Route path="/fichelogement" component={FicheLogement} />
+        ;<Routes>
+            <Route path="/" exact element={Home} />          
+            <Route path="/about" element={About} />
+            <Route path="/fichelogement" element={FicheLogement} />
             <Route render={() => <h1>404 Oups! La page que vous demandez n'existe pas</h1>} />
-        </Switch>
+        </Routes>
       </main>
     </Router>
   )
 }
-/*
-const Error = ({ history }) => (
-  <Fragment>
-    <h1>404 Oups! La page que vous demandez n'existe pas</h1>
-    <button onClick={() => history.push("/")}>Retourner sur la page d'accueil</button>
-    <Text />
-  </Fragment>
-)
 */
-/*
-const Home = () => (
-  <Fragment>
-    <h1>Accueil</h1>
-    <Text />
-  </Fragment>
-)
-*/
-const Home = ({
-  match: {
-    params: { logement },
-  },
-}) => (
-  // props.match.params.logement
-  <Fragment>
-    {logement !== "Titre de la location" ? <Redirect to="/" /> : null}
-    <h1>Accueil {logement}</h1>
-    <Text />
-  </Fragment>
-)
-
-const About = () => (
-  <Fragment>
-    <h1>About</h1>
-    <Text />
-  </Fragment>
-)
-
-const Text = () => (
-  <p>
-    Chez vous, partout et ailleurs
-  </p>
-)
-
-const FicheLogement = ({
-  match: {
-    params: { logement },
-  },
-}) => (
-  // props.match.params.logement
-  <Fragment>
-    <h1>FicheLogement {logement}</h1>
-    <Text />
-  </Fragment>
-)
