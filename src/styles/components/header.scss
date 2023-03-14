@@ -1,50 +1,32 @@
-/* .LOGO */
-position: absolute;
-left: 0%;
-right: 83.04%;
-top: 0%;
-bottom: 0%;
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 35px 40px 40px;
+    }
+
+.kasa-logo {
+    width: 120px;
+}
+
+header ul {
+    display: flex;
+    padding: 10 px;
+}
 
 
-/* Accueil */
-position: absolute;
-left: 75.08%;
-right: 13.95%;
-top: 25%;
-bottom: 25%
-
-
+a {
+margin: -10px 15px -10px 15px;
+display: flex;
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
-line-height: 142.6%;
-/* or 34px */
+color: #FF6060;
+list-style-type: none;
+}
 
-display: flex;
-align-items: flex-end;
-text-align: right;
+a:hover {
 text-decoration-line: underline;
-
-color: #FF6060;
-
-
-/* A Propos */
-position: absolute;
-left: 90.65%;
-right: 0%;
-top: 25%;
-bottom: 25%;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 142.6%;
-/* or 34px */
-
-display: flex;
-align-items: flex-end;
-text-align: right;
-
-color: #FF6060;
+    
+}

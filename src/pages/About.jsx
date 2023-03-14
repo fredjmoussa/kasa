@@ -1,5 +1,7 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
+import '../styles/components/about.scss';
 
 const About = () => {
     return (
@@ -14,17 +16,9 @@ const About = () => {
             <h3>Service</h3>
             <br />
             <h4>Responsabilité</h4>
+            <Footer />
         </div>
     );
 };
 
 export default About;
-
-/*
-const About = () => (
-    <Fragment>
-      <h1>About</h1>
-      <Text />
-    </Fragment>
-  )
-  */

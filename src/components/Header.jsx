@@ -1,9 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../assets/LOGO.png';
+import '../styles/components/header.scss';
 
 const Header = () => {
     return (
-        <div className='header'>
+        <header className='header'>
+            <img src={Logo} alt='kasa logo' className='kasa-logo' />
             <ul>
                 <NavLink to="/">
                     <li>Accueil</li>
@@ -12,7 +15,7 @@ const Header = () => {
                     <li>A propos</li>
                 </NavLink>
             </ul>
-        </div>
+        </header>
     );
 };
 
