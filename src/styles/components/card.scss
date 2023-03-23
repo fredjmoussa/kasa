@@ -1,26 +1,33 @@
 .background-containers {
 background: #F7F7F7;
 border-radius: 25px;
+display: flex;
+flex-wrap: wrap;
 }
 
 .containers {
 background: #F7F7F7;
 border-radius: 25px;
-margin: 40px;
+margin: 35px;
 }
 
 .containers ul {
-margin: 40px;
+margin: 35px;
 display: flex;
 flex-wrap: wrap;
-
 }
+
 
 .containers ul li{
 background: #FF6060;
-padding: 105px 90px 105px 90px;
+padding: 120px 80px 120px 80px;
 margin: 20px;
 border-radius: 10px;
 border-radius: 25px;
 border-radius: 10px; 
+
+}
+
+.containers a li {
+color: #FFFFFF;
 }

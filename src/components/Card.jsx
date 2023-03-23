@@ -7,22 +7,22 @@ const Card = () => {
         <div className='containers'>
             <ul>
                 <NavLink to="/">
-                    <li>container1</li>
+                    <li>Titre de la location</li>
                 </NavLink>
                 <NavLink to="/about">
-                    <li>container2</li>
+                    <li>Titre de la location</li>
                 </NavLink>
                 <NavLink to="/">
-                    <li>container3</li>
+                    <li>Titre de la location</li>
                 </NavLink>
                 <NavLink to="/about">
-                    <li>container4</li>
+                    <li>Titre de la location</li>
                 </NavLink>
                 <NavLink to="/">
-                    <li>container5</li>
+                    <li>Titre de la location</li>
                 </NavLink>
                 <NavLink to="/about">
-                    <li>container6</li>
+                    <li>Titre de la location</li>
                 </NavLink>
             </ul>
         </div>

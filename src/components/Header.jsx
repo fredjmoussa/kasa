@@ -6,7 +6,9 @@ import '../styles/components/header.scss';
 const Header = () => {
     return (
         <header className='header'>
-            <img src={Logo} alt='kasa logo' className='kasa-logo' />
+            <NavLink to="/">
+                <img src={Logo} alt='kasa logo' className='kasa-logo' />
+            </NavLink>  
             <ul>
                 <NavLink to="/">
                     <li>Accueil</li>

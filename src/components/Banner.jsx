@@ -1,15 +1,23 @@
 import React from 'react';
-import imgbanner from '../assets/IMG.png';
 import '../styles/components/banner.scss';
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-function Banner() {
-  const title = 'Chez vous partout et ailleurs'
-  return (
-        <div className='banner'>
-            <img src={imgbanner} alt='Chez vous, partout et ailleurs' className='img-banner' />
-            <h1 className='title-banner'>{title}</h1>
-        </div>
-    )
+export default function Banner() {
+    const [about, setAbout] = useState(false);
+
+    const location = useLocation();
+
+	useEffect(() => {
+		if(location.pathname === '/about'){
+			setAbout(true)
+		};
+		// eslint-disable-next-line
+	}, [])
+
+	return (
+		<div className={about ? 'bannerabout' : 'banner'}>
+			{!about && <p>Chez vous, partout et ailleurs</p>}
+		</div>
+	)
 }
-
-export default Banner

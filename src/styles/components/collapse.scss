@@ -1,0 +1,36 @@
+.collapse {
+    background: #FF6060;
+    color: white;
+    /*
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    height: 10px;
+    font-size: 20px;
+    */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.titre {
+        background-color: #FF6060;
+        color: #FFFFFF;
+        cursor: pointer;
+}
+        
+.vectorclosed {
+    transform: rotate(180deg);       
+}
+
+.collapseDescription {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    color: #FF6060;
+}
+
+.collapseNoDescription{
+        visibility: hidden;
+        height: 0;
+}
