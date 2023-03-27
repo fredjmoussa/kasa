@@ -1,36 +1,42 @@
+.main {
+    margin: 40px 200px 40px 200px;
+}
+
 .collapse {
-    background: #FF6060;
     color: white;
-    /*
-    padding: 10px;
-    margin: 20px;
-    border-radius: 3px;
-    height: 10px;
-    font-size: 20px;
-    */
-    display: flex;
-    justify-content: flex-start;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: #FF6060;
+
+    .collapseTitre {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .h1 {
+        padding: auto;
+    }
+    .vectoropen {
+        transition: all 0.3s ease-in-out;    
+    }
     
-}
+    .vectorclosed {
+        transform: rotate(180deg);   
+        transition: all 0.3s ease-in-out;    
+    }
 
-.titre {
-        background-color: #FF6060;
-        color: #FFFFFF;
+    .collapseDescription {
+        background: #F7F7F7;
+        color: #FF6060;
+        padding: 20px;
+        margin: -10px;
         cursor: pointer;
-}
         
-.vectorclosed {
-    transform: rotate(180deg);       
-}
+    }
+          
+    .collapseNoDescription{
+            visibility: hidden;
+            height: 0;
+    }
 
-.collapseDescription {
-    display: flex;
-    flex-direction: column;
-    visibility: visible;
-    color: #FF6060;
-}
-
-.collapseNoDescription{
-        visibility: hidden;
-        height: 0;
 }

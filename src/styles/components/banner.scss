@@ -1,38 +1,34 @@
 .banner {
-background-image: url('../../assets/banner.png');
-display: flex;
-margin: 40px;
-justify-content: center;
-align-items: center;
-position: relative;
-width: 100%;
-height: 200px;
-border-radius: 25px;
-object-fit: cover;
-}
+    background-image: url('../../assets/banner.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    border-radius: 25px;
+    background-position: center;
+    //mix-blend-mode: darken;
+    filter : brightness(80%);
+    margin: 40px 100px;
 
-
-.banner p {
-position: absolute;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 30px;
-margin-top: -10px;
-color: #FFFFFF;
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        color: #FFFFFF;
+    }
 }
 
 .bannerabout {
-background-image: url('../../assets/bannerabout.png');
-position: relative;
-width: 100%;
-height: 200px;
-border-radius: 25px;
-object-fit: cover;
-display: flex;
-position: relative;
-width: 100%;
-height: 200px;
-border-radius: 25px;
-object-fit: cover;
+    background-image: url('../../assets/bannerabout.png');
+    position: relative;
+    height: 200px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    margin: 40px 100px;
+
 }

@@ -1,0 +1,83 @@
+.slide img {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    border-radius: 25px;
+}
+
+.logement {
+
+.card {
+        border-radius: 25px;
+        background-position: center;
+        margin: 40px 100px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        color: #FF6060;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .tags {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            
+            p {
+                margin-right: 20px;
+                background-color: #FF6060;
+                border-radius: 25px;
+                padding: 5px 30px;
+            }
+        }
+}
+
+.host {
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #FF6060;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: -225px 100px 0 0;  
+
+.nameandimage {
+    display: flex;
+                align-items: center;
+}
+
+    .namehost {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+}
+
+}
+
+.main {
+
+
+    .maincollapse {
+        margin: 20px;
+        display: flex;
+            justify-content: space-between;
+        
+
+        .collapse {
+            margin: 20px;
+            padding: 0 25%;
+
+            .collapseDescription {
+                padding: -10px;
+            }
+            
+        }
+    }
+
+
+
+}
+

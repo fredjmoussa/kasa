@@ -9,7 +9,7 @@ export default function Collapse({titre, description}) {
     return (
 
         <div className='collapse'>
-        <h1 className='collapseTitre' onClick={() => setIsOpen(false)}>
+        <h1 className='collapseTitre' onClick={() => setIsOpen(!isOpen )}>
             {titre}
             <img className={isOpen ? 'vector vectoropen' : 'vector vectorclosed'} src={vector} alt='description'/>
         </h1>    
