@@ -7,14 +7,18 @@ import host from "../assets/Host.png";
 import Collapse from "../components/Collapse";
 import star from "../assets/star.png";
 import nostar from "../assets/nostar.png";
+import Slider from "../components/Carousel";
+//import * as React from 'react';
+import { Routes, Route, useParams } from 'react-router-dom';
+
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faStar } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 /*<FontAwesomeIcon icon={faStar} />*/
 
 /*
-const CardsList = () => {
-  const [appartments, setAppartments] = useState([]);
+const Card = () => {
+  const [imageSlider, setImageSlider] = useState([]);
 
   useEffect(() => {
     const fetchAppartments = async () => {
@@ -37,32 +41,25 @@ const CardsList = () => {
 export default CardsList;
 */
 
-/*
-import * as React from 'react';
-import { Routes, Route, useParams } from 'react-router-dom';
 
-function ProfilePage() {
-  // Get the userId param from the URL.
-  let { userId } = useParams();
-  // ...
-}
 
-function App() {
-  return (
-    <Routes>
-      <Route path="users">
-        <Route path=":userId" element={<ProfilePage />} />
-        <Route path="me" element={...} />
-      </Route>
-    </Routes>
-  );
-}
-*/
+
 
 const Card = () => {
   const cardDescriptions = [{}];
+  /*
+
+  //const [imgSlider, setImgSlider] = useState([]);
+  //const [appartments, setAppartments] = useState([]);
+
+  
+  const { id } = useParams();
+  const idDescription = useParams("id").id;
+  const logementsIdDescription = appartment 
+*/
 
   return (
+    
     <div className="logement">
       <Header />
       <div className="slide">
@@ -77,6 +74,10 @@ const Card = () => {
           <p>Paris 10</p>
         </div>
       </div>
+
+      <Routes>
+        <Route path="/logement/:id" element={<Card />} />
+      </Routes>
 
       <div className="host">
         <div className="nameandimage">
@@ -96,28 +97,22 @@ const Card = () => {
         </div>
       </div>
 
-      <main className="main">
+
+      <div className="collapseLogement">
         {cardDescriptions.map((data) => {
           return (
-            <div key={data.id} className="maincollapse">
-              <Collapse
-                style={{ margin: "30px 0" }}
-                titre={data.titre}
-                description={data.description}
-              />
+            <div key={data.id} className="collapseDescriptions">
+              <Collapse title={"Description"}/>
 
-              <Collapse
-                style={{ margin: "30px 0" }}
-                titre={data.titre}
-                description={data.description}
-              />
+              <Collapse title={"Equipements"}/>
             </div>
           );
         })}
-      </main>
+      </div>
 
       <Footer />
     </div>
+
   );
 };
 
