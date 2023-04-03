@@ -1,19 +1,19 @@
-import React from 'react';
-import Banner from '../components/Banner';
-import Card from '../components/Card';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import '../styles/components/home.scss';
-
+import React from "react";
+import Banner from "../components/Banner";
+import CardsList from "../components/CardsList";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import "../styles/components/home.scss";
+ 
 const Home = () => {
-    return (
-        <div>
-            <Header />
-            <Banner />
-            <Card />
-            <Footer />
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      <Banner text="Chez vous, partout et ailleurs" className="homepage"/>
+      <CardsList />
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

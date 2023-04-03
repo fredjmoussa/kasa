@@ -1,9 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './pages/About';
-import Card from './pages/Card';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Logement from "./pages/Logement";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import "./styles/global.scss";
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/Card" element={<Card />} />
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
@@ -19,6 +20,3 @@ const App = () => {
 };
 
 export default App;
-
-
-

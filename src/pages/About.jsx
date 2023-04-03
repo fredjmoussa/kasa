@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Collapse from '../components/Collapse';
 import '../styles/components/about.scss';
 
-
 export default function About () {
 
 	const aboutDescriptions = [
@@ -34,7 +33,7 @@ export default function About () {
     	return (
 		<div>
 			<Header />
-			<Banner />
+			<Banner text="" className="about"/>
 			<main className='main'>
 				{aboutDescriptions.map(data => {
 					return (

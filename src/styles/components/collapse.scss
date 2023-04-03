@@ -11,18 +11,23 @@
     .collapseTitre {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+        font-weight: 500;
+        font-size: 20px;
     }
 
     .h1 {
         padding: auto;
     }
     .vectoropen {
-        transition: all 0.3s ease-in-out;    
+        transition: all 0.3s ease-in-out;   
+        padding: 10px; 
     }
     
     .vectorclosed {
         transform: rotate(180deg);   
-        transition: all 0.3s ease-in-out;    
+        transition: all 0.3s ease-in-out;  
+        padding: 10px;  
     }
 
     .collapseDescription {
