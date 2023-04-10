@@ -1,33 +1,34 @@
-.main {
+.section {
     margin: 40px 200px 40px 200px;
 }
 
 .collapse {
     color: white;
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px 10px 30px 10px;
     background-color: #FF6060;
 
     .collapseTitre {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         font-weight: 500;
         font-size: 20px;
+        padding-top: 0px;
+        margin: 10px 10px;
     }
 
-    .h1 {
-        padding: auto;
-    }
-    .vectoropen {
+    .faAngleUp {
         transition: all 0.3s ease-in-out;   
         padding: 10px; 
+        font-size: 25px;
     }
     
-    .vectorclosed {
+    .faAngleDown {
         transform: rotate(180deg);   
         transition: all 0.3s ease-in-out;  
         padding: 10px;  
+        font-size: 25px;
     }
 
     .collapseDescription {

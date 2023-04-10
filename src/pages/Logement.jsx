@@ -1,115 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import "../styles/components/logements.scss";
-import slide1 from "../assets/BackgroundCard1.png";
-import host from "../assets/Host.png";
 import Collapse from "../components/Collapse";
-import star from "../assets/star.png";
-import nostar from "../assets/nostar.png";
+import "../styles/components/logements.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Slider from "../components/Carousel";
-//import * as React from 'react';
-import { Routes, Route, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faStar } from '@fortawesome/fontawesome-svg-core/import.macro';
-
-/*<FontAwesomeIcon icon={faStar} />*/
-
-/*
 const Card = () => {
-  const [imageSlider, setImageSlider] = useState([]);
+  const { id } = useParams();
+  const [logement, SetLogement] = useState(null);
 
   useEffect(() => {
     const fetchAppartments = async () => {
       const response = await fetch("/logements.json");
       const appartments = await response.json();
-      setAppartment(appartments.find avec id qu'on a recup dans url);
+      SetLogement(appartments.find(appartments => appartments.id === id));
     };
     fetchAppartments();
-  }, []);
-
-  return (
-    <div className="containers">
-      {cardsList.map((logement) => (
-        <Card key={logement.id} appartment={logement} />
-      ))}
-    </div>
-  );
-};
-
-export default CardsList;
-*/
-
-
-
-
-
-const Card = () => {
-  const cardDescriptions = [{}];
-  /*
-
-  //const [imgSlider, setImgSlider] = useState([]);
-  //const [appartments, setAppartments] = useState([]);
-
-  
-  const { id } = useParams();
-  const idDescription = useParams("id").id;
-  const logementsIdDescription = appartment 
-*/
+  }, [id]);
 
   return (
     
     <div className="logement">
       <Header />
-      <div className="slide">
-        <img src={slide1} alt="slide1" />
-      </div>
-      <div className="card">
-        <h1>Cozy loft on the Canal Saint-Martin</h1>
-        <h2>Paris, Île-de-France</h2>
-        <div className="tags">
-          <p>Cozy</p>
-          <p>Canal</p>
-          <p>Paris 10</p>
-        </div>
-      </div>
-
-      <Routes>
-        <Route path="/logement/:id" element={<Card />} />
-      </Routes>
-
-      <div className="host">
-        <div className="nameandimage">
-          <div className="namehost">
-            <p>Alexandre</p>
-            <p>Dumas</p>
+      
+      {logement !== null && (
+      <section className="content">
+        <Slider />
+        <div className="card">
+          <h1>{logement.title}</h1>
+          <h2>{logement.location}</h2>
+          <div className="tags">
+            <p>{logement.tags}</p>
           </div>
-          <img src={host} alt="host" />
         </div>
 
-        <div className="stars">
-          <img src={star} alt="star" />
-          <img src={star} alt="star" />
-          <img src={star} alt="star" />
-          <img src={nostar} alt="nostar" />
-          <img src={nostar} alt="nostar" />
-        </div>
-      </div>
-
-
-      <div className="collapseLogement">
-        {cardDescriptions.map((data) => {
-          return (
-            <div key={data.id} className="collapseDescriptions">
-              <Collapse title={"Description"}/>
-
-              <Collapse title={"Equipements"}/>
+        <div className="host">
+          <div className="nameandimage">
+            <div className="namehost">
+              <p>{logement.host.name}</p>
             </div>
-          );
-        })}
-      </div>
+            <img src={logement.host.picture} alt="host" />
+          </div>
 
+          <div className="stars">
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+          </div>
+        </div>
+
+        <div className="collapseLogement">
+          <div className="description">
+            <Collapse titre='Description' description={logement.description} />
+          </div>
+          <div className="equipements">
+            <Collapse titre='Equipements' description={logement.equipments} />
+          </div>
+        </div>
+      </section>
+      )};
       <Footer />
     </div>
 
@@ -117,3 +71,32 @@ const Card = () => {
 };
 
 export default Card;
+
+
+//sliderShow
+/*
+<Carousel />
+*/
+
+//stars pb with <FontAwesomeIcon icon="fa-regular fa-star" /> <FontAwesomeIcon icon="fa-solid fa-star" />
+/*
+            <div className="accomodation_content_host_stars">
+							{[...Array(5)].map((faStar, index) => {
+								const ratingValue = index + 1;
+								return (
+									<img key={index} src={ratingValue <= logement.rating ? {faStar} : {faStar}} alt="stars" />
+								)
+							})}
+						</div>
+*/
+
+//tags
+/*{
+         <div>
+							{logement[0].tags.map((tag, index) => {
+								return (
+									<p key={index}>{tag}</p>
+								)
+							})}
+						</div>
+}*/

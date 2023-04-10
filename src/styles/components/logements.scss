@@ -1,4 +1,4 @@
-.slide img {
+.slider {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -40,18 +40,32 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: -225px 100px 0 0;  
+    margin: -175px 100px 0 0;  
 
-.nameandimage {
-    display: flex;
-                align-items: center;
-}
+    .stars {
+        margin-top: 16px;
+        font-size: 20px;
+        svg {
+            padding: 0 5px;
+        }
+    }
 
-    .namehost {
+    img {
+        border-radius: 100px;
+        width: 60px;
+    }
+
+    .nameandimage {
         display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-        margin-right: 20px;
+        align-items: center;
+
+        .namehost {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            margin-right: 10px;
+            width: 1px;
+        }
     }
 }
 
@@ -59,25 +73,28 @@
 
 .collapseLogement {
     display: flex;
+    justify-content: center;
+    margin-top: 30px;
 
-    .maincollapse {
-        margin: 20px;
-        display: flex;
-            
-        
-
-        .collapse {
-            margin: 20px;
-            padding: 0 25%;
-
-            .collapseDescription {
-                padding: -10px;
-            }
-            
-        }
+    .collapseTitre {
+        margin: 10px 20px;
     }
 
+    .collapseDescription {
+        margin: 0px;
+    }
 
+    .collapseEquipements {
+        margin: 0px;
+    }
+
+    .description {
+        width: 45%;
+    }
+
+    .equipements {
+        width: 45%;
+    }
 
 }
 

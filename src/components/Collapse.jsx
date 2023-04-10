@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/components/collapse.scss';
-import vector from '../assets/Vector.png';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faAngleUp } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
+ 
 export default function Collapse({titre, description}) {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +13,9 @@ export default function Collapse({titre, description}) {
         <div className='collapse'>
         <h1 className='collapseTitre' onClick={() => setIsOpen(!isOpen )}>
             {titre}
-        
-            <img className={isOpen ? 'vector vectoropen' : 'vector vectorclosed'} src={vector} alt='description'/>
+            <div className={isOpen ? 'faAngleDown' : 'faAngleUp'} >
+            <FontAwesomeIcon icon={faAngleUp} />
+            </div>
         </h1>    
             <div className={isOpen ? 'collapseDescription' : 'collapseNoDescription'}>
             {Array.isArray(description) ? description.map((item, index) => {
@@ -28,4 +29,3 @@ export default function Collapse({titre, description}) {
         </div>
     )
 }
-//<FontAwesomeIcon icon={faAngleUp} />

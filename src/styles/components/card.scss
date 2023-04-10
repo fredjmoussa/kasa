@@ -1,40 +1,44 @@
-
 .containers {
     display: flex;
     flex-wrap: wrap;
     background: #F7F7F7;
     border-radius: 25px;
     margin: 35px 100px;
-    position: relative;
     justify-content: center;
     align-items: center;
     padding: 40px;
 
     .cards {
-        
-        a {
             display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
+            margin: 20px;
+            height: 340px;
+            width: 340px;
+            border-radius: 7px;
 
             img {
                 display: flex;
-                margin: 20px;
+                position: absolute;
                 height: 340px;
                 width: 340px;
                 border-radius: 7px;
                 object-fit: cover;
                 z-index: 5;
+                
             }
+        
+        
+        a {
+            display: flex;
+            align-items: flex-end;
+            text-decoration: none;
+
 
             p {
                 display: flex;
                 flex-wrap: wrap;
-                position: absolute;
                 color: white;
                 z-index: 10;
-                padding: 0 20px 20px 40px;
-                margin-right: 130px;
+                padding: 0 60px 0px 20px;
             }
 
     }

@@ -4,7 +4,8 @@ import '../styles/components/banner.scss';
 export default function Banner({ text, className }) {
 
 	return (
-		<div className={"banner ${className}"}>
+		//hooks mettre image selon la classe que je donne
+		<div className={`banner ${className}`}>
 			<h2>{text}</h2>
 		</div>
 	)
