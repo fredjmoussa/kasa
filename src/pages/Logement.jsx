@@ -11,7 +11,7 @@ import { useParams } from 'react-router-dom';
 const Card = () => {
   const { id } = useParams();
   const [logement, SetLogement] = useState(null);
-
+  
   useEffect(() => {
     const fetchAppartments = async () => {
       const response = await fetch("/logements.json");
@@ -92,11 +92,8 @@ export default Card;
 
 //tags
 /*{
-         <div>
-							{logement[0].tags.map((tag, index) => {
-								return (
-									<p key={index}>{tag}</p>
-								)
-							})}
-						</div>
+         {logement.map((logement) => (
+              <p> key={logement.id} appartment={logement.tags} </p>
+              //console.log({logement.tags});          
+            ))}
 }*/
