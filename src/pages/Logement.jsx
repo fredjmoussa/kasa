@@ -3,97 +3,78 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Collapse from "../components/Collapse";
 import "../styles/components/logements.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Slider from "../components/Carousel";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const Card = () => {
   const { id } = useParams();
-  const [logement, SetLogement] = useState(null);
-  
+  const [logement, setLogement] = useState(null);
+
   useEffect(() => {
     const fetchAppartments = async () => {
       const response = await fetch("/logements.json");
       const appartments = await response.json();
-      SetLogement(appartments.find(appartments => appartments.id === id));
+      setLogement(appartments.find((appartments) => appartments.id === id));
     };
     fetchAppartments();
   }, [id]);
 
+  console.log(logement);
+
   return (
-    
     <div className="logement">
       <Header />
-      
       {logement !== null && (
-      <section className="content">
-        <Slider />
-        <div className="card">
-          <h1>{logement.title}</h1>
-          <h2>{logement.location}</h2>
-          <div className="tags">
-            <p>{logement.tags}</p>
-          </div>
-        </div>
-
-        <div className="host">
-          <div className="nameandimage">
-            <div className="namehost">
-              <p>{logement.host.name}</p>
+        <section className="content">
+          <Slider pictures={logement.pictures} />
+          <div className="card">
+            <h1>{logement.title}</h1>
+            <h2>{logement.location}</h2>
+            <div className="tags">
+              {logement.tags.map((tag) => (
+                <p>{tag}</p>
+              ))}
             </div>
-            <img src={logement.host.picture} alt="host" />
           </div>
 
-          <div className="stars">
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
-          </div>
-        </div>
+          <div className="host">
+            <div className="nameandimage">
+              <div className="namehost">
+                <p>{logement.host.name}</p>
+              </div>
+              <img src={logement.host.picture} alt="host" />
+            </div>
 
-        <div className="collapseLogement">
-          <div className="description">
-            <Collapse titre='Description' description={logement.description} />
+            <div className="stars">
+              {[...Array(5)].map((x, index) => (
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className={
+                    index + 1 > Number(logement.rating) ? "star-grey" : ""
+                  }
+                />
+              ))}
+            </div>
           </div>
-          <div className="equipements">
-            <Collapse titre='Equipements' description={logement.equipments} />
+
+          <div className="collapseLogement">
+            <div className="description">
+              <Collapse
+                titre="Description"
+                description={logement.description}
+              />
+            </div>
+            <div className="equipements">
+              <Collapse titre="Equipements" description={logement.equipments} />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )};
       <Footer />
     </div>
-
   );
 };
 
 export default Card;
-
-
-//sliderShow
-/*
-<Carousel />
-*/
-
-//stars pb with <FontAwesomeIcon icon="fa-regular fa-star" /> <FontAwesomeIcon icon="fa-solid fa-star" />
-/*
-            <div className="accomodation_content_host_stars">
-							{[...Array(5)].map((faStar, index) => {
-								const ratingValue = index + 1;
-								return (
-									<img key={index} src={ratingValue <= logement.rating ? {faStar} : {faStar}} alt="stars" />
-								)
-							})}
-						</div>
-*/
-
-//tags
-/*{
-         {logement.map((logement) => (
-              <p> key={logement.id} appartment={logement.tags} </p>
-              //console.log({logement.tags});          
-            ))}
-}*/

@@ -1,0 +1,49 @@
+.slider {
+
+
+    
+    .slideshow{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        object-fit: cover;
+        width: 100%;
+        height: 415px;
+        margin: 20px 100px -30px 100px; 
+
+        .pictures {
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+        border-radius: 25px;
+
+        }
+        .arrows p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .left{
+                margin-left: 75px;
+                font-size: 150px;
+                left: 55px;
+                top: 250px;
+                color: white;
+                position: absolute;
+            }
+            .right{
+                margin-right: 75px;
+                font-size: 150px;
+                right: 55px;
+                top: 250px;
+                color: white;
+                position: absolute;
+            }
+        }
+        .number{
+            color: white;
+            position: absolute;
+        }
+    }
+}
