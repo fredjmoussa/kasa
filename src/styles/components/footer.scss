@@ -1,22 +1,20 @@
 .footer {
-        margin: -10px;
-        padding: 30px;
-    display: flex;
-    flex-direction: column;
-    background-color: #000000;
-    align-items: center;
-    justify-content: center;
+  margin: -10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  align-items: center;
+  justify-content: center;
 
-    .kasa-logo {
-        padding: 10px 0 0 0;
-        width: 10%;
-        }
-        
-    p {
-        font-size: 20px;
-        color: #FFFFFF;
-        padding: 10px 0 0 0;
-    }
+  .kasa-logo {
+    padding: 10px 0 0 0;
+    width: 10%;
+  }
 
+  p {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 0 0 0;
+  }
 }
-

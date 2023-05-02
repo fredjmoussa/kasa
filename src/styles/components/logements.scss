@@ -1,112 +1,109 @@
 .slider {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-    border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  border-radius: 25px;
 }
 
 .logement {
-
-.card {
-        border-radius: 25px;
-        background-position: center;
-        margin: 40px 100px;
-        font-family: 'Montserrat';
-        font-style: normal;
-        color: #FF6060;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .tags {
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            color: white;
-            
-            p {
-                margin-right: 20px;
-                background-color: #FF6060;
-                border-radius: 25px;
-                padding: 5px 30px;
-            }
-        }
-}
-
-.host {
-    font-family: 'Montserrat';
+  .card {
+    border-radius: 25px;
+    background-position: center;
+    margin: 40px 100px;
+    font-family: "Montserrat";
     font-style: normal;
-    color: #FF6060;
+    color: #ff6060;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .tags {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      color: white;
+
+      p {
+        margin-right: 20px;
+        background-color: #ff6060;
+        border-radius: 25px;
+        padding: 5px 30px;
+      }
+    }
+  }
+
+  .host {
+    font-family: "Montserrat";
+    font-style: normal;
+    color: #ff6060;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: -175px 100px 0 0;  
+    margin: -175px 100px 0 0;
 
     .stars {
-        margin-top: 16px;
-        font-size: 20px;
+      margin-top: 16px;
+      font-size: 20px;
 
-        .star-grey {
-            color: #E3E3E3;
-        }
+      .star-grey {
+        color: #e3e3e3;
+      }
 
-        svg {
-            padding: 0 5px;
-        }
+      svg {
+        padding: 0 5px;
+      }
     }
 
     img {
-        border-radius: 100px;
-        width: 60px;
+      border-radius: 100px;
+      width: 60px;
     }
 
     .nameandimage {
+      display: flex;
+      align-items: center;
+
+      .namehost {
         display: flex;
-        align-items: center;
-
-        .namehost {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            margin-right: 10px;
-            width: 1px;
-        }
+        align-items: flex-end;
+        flex-direction: column;
+        margin-right: 10px;
+        width: 1px;
+      }
     }
-}
-
+  }
 }
 
 .collapseLogement {
-    display: flex;
-    justify-content: center;
-    margin: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 40px;
 
-    .collapseTitre {
-        padding: 0px 20px;
-        margin: auto;
-    }
+  .collapseTitre {
+    padding: 0px 20px;
+    margin: auto;
+  }
 
-    .collapseDescription {
-        margin: 0px;
-    }
+  .collapseDescription {
+    margin: 0px;
+  }
 
-    .collapseEquipements {
-        margin: 0px;
-    }
+  .collapseEquipements {
+    margin: 0px;
+  }
 
-    .description {
-        width: 45%;
-    }
+  .description {
+    width: 45%;
+  }
 
-    .equipements {
-        width: 45%;
-    }
-/*
+  .equipements {
+    width: 45%;
+  }
+  /*
     .collapseNoDescription{
         visibility: hidden;
         height: 0;
 }
 */
 }
-

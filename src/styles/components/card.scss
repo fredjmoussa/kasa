@@ -1,48 +1,42 @@
 .containers {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f7f7f7;
+  border-radius: 25px;
+  margin: 35px 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  .cards {
     display: flex;
-    flex-wrap: wrap;
-    background: #F7F7F7;
-    border-radius: 25px;
-    margin: 35px 100px;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
+    margin: 10px;
+    height: 340px;
+    width: 340px;
+    border-radius: 7px;
 
-    .cards {
-            display: flex;
-            margin: 10px;
-            height: 340px;
-            width: 340px;
-            border-radius: 7px;
-
-            img {
-                display: flex;
-                position: absolute;
-                height: 340px;
-                width: 340px;
-                border-radius: 7px;
-                object-fit: cover;
-                z-index: 5;
-                
-            }
-        
-        
-        a {
-            display: flex;
-            align-items: flex-end;
-            text-decoration: none;
-
-
-            p {
-                display: flex;
-                flex-wrap: wrap;
-                color: white;
-                z-index: 10;
-                padding: 0 60px 0px 20px;
-            }
-
+    img {
+      display: flex;
+      position: absolute;
+      height: 340px;
+      width: 340px;
+      border-radius: 7px;
+      object-fit: cover;
+      z-index: 5;
     }
 
-    }
+    a {
+      display: flex;
+      align-items: flex-end;
+      text-decoration: none;
 
+      p {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        z-index: 10;
+        padding: 0 60px 0px 20px;
+      }
+    }
+  }
 }

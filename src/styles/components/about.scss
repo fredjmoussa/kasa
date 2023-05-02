@@ -1,50 +1,48 @@
-.about .card { 
+.about .card {
+  h1 {
+    background: #ff6060;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    height: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
 
-    h1 {
-        background: #FF6060;
-        color: white;
-        padding: 10px;
-        margin: 20px;
-        border-radius: 3px;
-        height: 10px;
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
+  h2 {
+    background: #ff6060;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    height: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  h3 {
+    background: #ff6060;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    height: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
 
-    h2 {
-        background: #FF6060;
-        color: white;
-        padding: 10px;
-        margin: 20px;
-        border-radius: 3px;
-        height: 10px;
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
-    h3 {
-        background: #FF6060;
-        color: white;
-        padding: 10px;
-        margin: 20px;
-        border-radius: 3px;
-        height: 10px;
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    h4 {
-        background: #FF6060;
-        color: white;
-        padding: 10px;
-        margin: 20px;
-        border-radius: 3px;
-        height: 10px;
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
-
+  h4 {
+    background: #ff6060;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    height: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
