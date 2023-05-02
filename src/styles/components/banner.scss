@@ -25,6 +25,9 @@
     background-color: black;
     opacity: 0.2;
     border-radius: 25px;
+    @media only screen and (max-width: 768px) {
+      border-radius: 10px;
+    }
   }
 
   h2 {
@@ -37,7 +40,8 @@
     color: #ffffff;
     @media only screen and (max-width: 768px) {
       font-size: 20px;
-      margin: 20px;
+      width: 55%;
+      margin-left: -90px;
     }
   }
 }

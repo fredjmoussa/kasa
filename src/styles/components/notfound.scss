@@ -9,6 +9,10 @@
     font-size: 290px;
     color: #ff6060;
     margin-bottom: -20px;
+    @media only screen and (max-width: 768px) {
+      font-size: 90px;
+      margin-top: 150px;
+    }
   }
 
   h2 {
@@ -22,6 +26,11 @@
     display: flex;
     align-items: center;
     color: #ff6060;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+      width: 68%;
+      margin: 20px 60px;
+    }
   }
 
   h3 {
@@ -35,6 +44,11 @@
     text-decoration-line: underline;
     color: #ff6060;
     margin: 100px;
+    @media only screen and (max-width: 768px) {
+      margin: 0;
+      font-size: 15px;
+      padding: 100px 0 200px 0;
+    }
   }
 
   a {

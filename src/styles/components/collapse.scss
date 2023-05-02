@@ -1,5 +1,8 @@
 .section {
   margin: 40px 200px 40px 200px;
+    @media only screen and (max-width: 768px) {
+      margin: 25px 5px;
+    }
 }
 
 .collapse {
@@ -41,5 +44,8 @@
   .collapseNoDescription {
     visibility: hidden;
     height: 0;
+      p {
+    margin: 0px;
+    }
   }
 }
