@@ -9,6 +9,11 @@
   background-position: center;
   background-size: cover;
   margin: 40px 100px;
+  @media only screen and (max-width: 768px) {
+      margin: 20px 15px;
+      height: 100px;
+      border-radius: 10px;
+    }
 
   &::after {
     content: "";
@@ -30,6 +35,10 @@
     font-weight: 500;
     font-size: 40px;
     color: #ffffff;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+      margin: 20px;
+    }
   }
 }
 
@@ -44,4 +53,8 @@
   background-position: center;
   background-size: cover;
   margin: 40px 100px;
+  @media only screen and (max-width: 768px) {
+      margin: 40px 15px;
+      border-radius: 10px;
+    }
 }
