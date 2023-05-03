@@ -21,8 +21,6 @@ const Card = () => {
     fetchAppartments();
   }, [id]);
 
-  console.log(logement);
-
   return (
     <div className="logement">
       <Header />
