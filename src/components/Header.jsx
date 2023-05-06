@@ -13,7 +13,7 @@ const Header = () => {
         <img src={Logo} alt="kasa logo" className="kasa-logo" />
       </NavLink>
       <ul>
-        <NavLink to="/" ClassName={location.pathname === "/" ? "active" : ""}>
+        <NavLink to="/" className={location.pathname === "/" ? "active" : ""}>
           <li>Accueil</li>
         </NavLink>
         <NavLink to="/about">
