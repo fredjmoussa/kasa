@@ -8,7 +8,7 @@ import "../styles/components/about.scss";
 
 export default function About() {
   return (
-    //tableau aboutDescriptions est parcouru à l'aide de la méthode "map" pour créer une liste de composants "Collapse". Chaque "Collapse" a un titre et une description. La propriété "key" est utilisée pour chaque élément de la liste
+    //tableau aboutDescriptions est parcouru à l'aide de la méthode "map" pour créer une liste de composants "Collapse". La propriété "key" est utilisée pour chaque élément de la liste. Le composant Collapse prend deux propriétés (titre et description) qui sont passées en tant que valeurs d'attributs. 
     <div>
       <Header />
       <Banner text="" className="bannerabout" />
